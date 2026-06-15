@@ -38,14 +38,14 @@ const App = () => {
   ];
 
   return (
-    <div className="font-sans text-slate-800 bg-white selection:bg-amber-500 selection:text-white">
+    <div className="font-sans text-slate-800 selection:bg-amber-500 selection:text-white">
       
       {/* Navbar */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900 shadow-lg py-2' : 'bg-transparent py-4'}`}>
-        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/85 backdrop-blur-md shadow-xl py-2 border-b border-white/10' : 'bg-transparent py-4'}`}>
+        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center max-w-6xl">
           <a href="#" className="text-2xl font-bold text-white tracking-tighter flex items-center gap-2">
-            <div className="w-8 h-8 bg-amber-500 flex items-center justify-center rounded text-slate-900 font-black">Ç</div>
-            ÇAKIR İNŞAAT
+            <div className="w-9 h-9 bg-amber-500 flex items-center justify-center rounded-md text-slate-900 font-black shadow-lg shadow-amber-900/40">Ç</div>
+            <span className="font-serif text-[1.65rem] leading-none">ÇAKIR İNŞAAT</span>
           </a>
 
           {/* Desktop Menu */}
@@ -55,7 +55,7 @@ const App = () => {
                 {link.name}
               </a>
             ))}
-            <a href="#contact" className="px-5 py-2 bg-amber-500 text-slate-900 font-bold text-sm rounded hover:bg-amber-400 transition-colors">
+            <a href="#contact" className="px-5 py-2 bg-amber-500 text-slate-900 font-bold text-sm rounded-md hover:bg-amber-400 transition-colors shadow-lg shadow-amber-900/35">
               Teklif Al
             </a>
           </div>
@@ -86,54 +86,69 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1541976544337-1f99297df8c2?auto=format&fit=crop&q=80&w=2000" 
             alt="Construction Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-slate-900/70"></div>
+          <div className="absolute inset-0 bg-slate-900/72"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,119,6,.28),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(148,163,184,.18),transparent_30%)]"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10 text-center md:text-left">
-          <span className="inline-block py-1 px-3 rounded bg-amber-500/20 text-amber-400 border border-amber-500/50 text-sm font-bold mb-4 animate-fade-in-up">
+        <div className="container mx-auto px-4 relative z-10 text-center md:text-left max-w-6xl">
+          <span className="inline-block py-1.5 px-3.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-400/50 text-xs md:text-sm font-bold mb-5 animate-fade-in-up tracking-widest">
             1995'TEN BERİ GÜVENLE
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight max-w-4xl">
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-semibold text-white mb-6 leading-[1.02] max-w-4xl drop-shadow-2xl">
             Geleceği Sağlam Temeller Üzerine <span className="text-amber-500">İnşa Ediyoruz</span>
           </h1>
-          <p className="text-lg text-slate-300 mb-8 max-w-2xl leading-relaxed">
+          <p className="text-lg text-slate-200 mb-8 max-w-2xl leading-relaxed">
             Çakır İnşaat olarak, modern mimariyi geleneksel sağlamlıkla birleştiriyor, aileniz ve işiniz için güvenli yaşam alanları tasarlıyoruz.
           </p>
           <div className="flex flex-col md:flex-row gap-4">
-            <a href="#projects" className="px-8 py-4 bg-amber-500 text-slate-900 font-bold rounded hover:bg-amber-400 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+            <a href="#projects" className="px-8 py-4 bg-amber-500 text-slate-900 font-bold rounded-md hover:bg-amber-400 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 shadow-lg shadow-amber-900/40">
               Projelerimizi İnceleyin <ArrowRight size={20} />
             </a>
-            <a href="#contact" className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded hover:bg-white hover:text-slate-900 transition-all flex items-center justify-center">
+            <a href="#contact" className="px-8 py-4 bg-white/5 border-2 border-white/80 text-white font-bold rounded-md hover:bg-white hover:text-slate-900 transition-all flex items-center justify-center">
               Bize Ulaşın
             </a>
+          </div>
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-3xl">
+            <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-3 text-left">
+              <p className="text-amber-300 font-bold text-sm">+28 Yıl</p>
+              <p className="text-white/90 text-sm">Saha Deneyimi</p>
+            </div>
+            <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-3 text-left">
+              <p className="text-amber-300 font-bold text-sm">150+ Proje</p>
+              <p className="text-white/90 text-sm">Tamamlanan Yapı</p>
+            </div>
+            <div className="rounded-xl border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-3 text-left">
+              <p className="text-amber-300 font-bold text-sm">Anahtar Teslim</p>
+              <p className="text-white/90 text-sm">Şeffaf Süreç</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <div className="bg-slate-900 py-12 border-b border-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-800/0 md:divide-slate-700">
-            <div className="p-4">
+      <div className="bg-slate-950 py-12 border-b border-slate-800">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="p-4 rounded-xl border border-slate-800/70 bg-slate-900/40">
               <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2">28+</div>
               <div className="text-slate-400 text-sm md:text-base">Yıllık Tecrübe</div>
             </div>
-            <div className="p-4">
+            <div className="p-4 rounded-xl border border-slate-800/70 bg-slate-900/40">
               <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2">150+</div>
               <div className="text-slate-400 text-sm md:text-base">Tamamlanan Proje</div>
             </div>
-            <div className="p-4">
+            <div className="p-4 rounded-xl border border-slate-800/70 bg-slate-900/40">
               <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2">500+</div>
               <div className="text-slate-400 text-sm md:text-base">Mutlu Aile</div>
             </div>
-            <div className="p-4">
+            <div className="p-4 rounded-xl border border-slate-800/70 bg-slate-900/40">
               <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2">50+</div>
               <div className="text-slate-400 text-sm md:text-base">Uzman Personel</div>
             </div>
@@ -142,8 +157,8 @@ const App = () => {
       </div>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="about" className="py-20 bg-white/85 backdrop-blur-sm">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="lg:w-1/2 relative">
               <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl">
@@ -153,8 +168,8 @@ const App = () => {
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-amber-500/20 rounded-full blur-2xl -z-0"></div>
             </div>
             <div className="lg:w-1/2">
-              <h4 className="text-amber-500 font-bold uppercase tracking-wider mb-2">Hakkımızda</h4>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Kalite ve Güvenin Adresi: Çakır İnşaat</h2>
+              <h4 className="text-amber-600 font-bold uppercase tracking-[0.18em] mb-2">Hakkımızda</h4>
+              <h2 className="font-serif text-4xl md:text-5xl font-semibold text-slate-900 mb-6">Kalite ve Güvenin Adresi: Çakır İnşaat</h2>
               <p className="text-slate-600 mb-6 leading-relaxed">
                 1995 yılında kurulan Çakır İnşaat, inşaat sektöründe kalite, estetik ve güveni bir araya getirme misyonuyla yola çıkmıştır. Çeyrek asrı aşkın tecrübemizle, şehrin silüetine değer katan projelere imza atıyoruz.
               </p>
@@ -175,17 +190,17 @@ const App = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
+      <section id="services" className="py-20 bg-slate-50/80 backdrop-blur-sm">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h4 className="text-amber-500 font-bold uppercase tracking-wider mb-2">Hizmetlerimiz</h4>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Size Nasıl Yardımcı Olabiliriz?</h2>
+            <h4 className="text-amber-600 font-bold uppercase tracking-[0.18em] mb-2">Hizmetlerimiz</h4>
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold text-slate-900 mb-4">Size Nasıl Yardımcı Olabiliriz?</h2>
             <p className="text-slate-600">Projenizin her aşamasında profesyonel ekibimizle yanınızdayız.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-amber-500 group">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-slate-100 hover:border-amber-300 group hover:-translate-y-1">
                 <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300 inline-block p-4 rounded-full bg-slate-50 group-hover:bg-amber-50">
                   {service.icon}
                 </div>
@@ -202,11 +217,11 @@ const App = () => {
 
       {/* Projects Portfolio */}
       <section id="projects" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div>
-              <h4 className="text-amber-500 font-bold uppercase tracking-wider mb-2">Projelerimiz</h4>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Son Çalışmalarımız</h2>
+              <h4 className="text-amber-600 font-bold uppercase tracking-[0.18em] mb-2">Projelerimiz</h4>
+              <h2 className="font-serif text-4xl md:text-5xl font-semibold text-slate-900">Son Çalışmalarımız</h2>
             </div>
             <a href="#" className="px-6 py-3 border border-slate-200 rounded hover:bg-slate-50 text-slate-600 font-medium transition-colors">
               Tüm Projeleri Gör
@@ -215,7 +230,7 @@ const App = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
-              <div key={project.id} className="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer">
+              <div key={project.id} className="group relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer shadow-md ring-1 ring-slate-200">
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -234,8 +249,8 @@ const App = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-amber-500">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Hayalinizdeki Projeyi Birlikte İnşa Edelim</h2>
+        <div className="container mx-auto px-4 text-center max-w-6xl">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold text-slate-900 mb-6">Hayalinizdeki Projeyi Birlikte İnşa Edelim</h2>
           <p className="text-slate-900/80 text-lg mb-8 max-w-2xl mx-auto">Uzman ekibimizle tanışmak ve ücretsiz keşif hizmetimizden yararlanmak için hemen bizimle iletişime geçin.</p>
           <a href="#contact" className="inline-block px-8 py-4 bg-slate-900 text-white font-bold rounded hover:bg-slate-800 transition-colors shadow-lg">
             Hemen Teklif Alın
@@ -244,14 +259,14 @@ const App = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
+      <section id="contact" className="py-20 bg-slate-50/85 backdrop-blur-sm">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12">
             
             {/* Contact Info */}
             <div>
-              <h4 className="text-amber-500 font-bold uppercase tracking-wider mb-2">İletişim</h4>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Bize Ulaşın</h2>
+              <h4 className="text-amber-600 font-bold uppercase tracking-[0.18em] mb-2">İletişim</h4>
+              <h2 className="font-serif text-4xl md:text-5xl font-semibold text-slate-900 mb-6">Bize Ulaşın</h2>
               <p className="text-slate-600 mb-8">
                 Projeleriniz hakkında detaylı bilgi almak veya ofisimizi ziyaret etmek için aşağıdaki bilgilerden bize ulaşabilirsiniz.
               </p>
@@ -303,7 +318,7 @@ const App = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="bg-white p-8 rounded-xl shadow-lg ring-1 ring-slate-100">
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Mesaj Gönderin</h3>
               <form onSubmit={(e) => { e.preventDefault(); alert('Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.'); }}>
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
@@ -344,13 +359,13 @@ const App = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div className="container mx-auto px-4">
+      <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">
               <a href="#" className="text-2xl font-bold text-white tracking-tighter flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 bg-amber-500 flex items-center justify-center rounded text-slate-900 font-black">Ç</div>
-                ÇAKIR İNŞAAT
+                <span className="font-serif text-[1.6rem]">ÇAKIR İNŞAAT</span>
               </a>
               <p className="max-w-sm mb-6">
                 İnşaat sektöründe güven ve kalitenin adresi. Modern yaşam alanları ve ticari yapılarla geleceği inşa ediyoruz.
