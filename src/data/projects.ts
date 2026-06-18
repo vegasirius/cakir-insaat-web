@@ -1,0 +1,118 @@
+import type { Project } from '../types/project';
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: 'Vadi Konakları',
+    category: 'Konut',
+    image: '/uploads/projects/bina1.jpg',
+    location: 'İstanbul',
+    year: '2024',
+    description:
+      'Yatay mimari prensibiyle tasarlanan, geniş peyzaj alanları ve akıllı ev altyapısına sahip konut projesi.',
+    client: 'Vadi Yaşam GYO',
+    area: '18.600 m²',
+    delivery: 'Ekim 2024',
+    stats: [
+      { label: 'Blok', value: '6' },
+      { label: 'Bağımsız Bölüm', value: '184' },
+      { label: 'Otopark', value: '220 araç' },
+    ],
+    gallery: ['/uploads/projects/bina1.jpg', '/uploads/projects/bina2.jpg', '/uploads/projects/bina3.jpg'],
+  },
+  {
+    id: 2,
+    title: 'Çakır Plaza',
+    category: 'Ticari',
+    image: '/uploads/projects/giris.jpg',
+    location: 'Mecidiyeköy',
+    year: '2023',
+    description:
+      'Yüksek sirkülasyonlu ticari kullanımlar için optimize edilen lobi, asansör ve teknik altyapı çözümleri.',
+    client: 'Çakır Gayrimenkul',
+    area: '9.200 m²',
+    delivery: 'Haziran 2023',
+    stats: [
+      { label: 'Kat', value: '14' },
+      { label: 'Ofis', value: '56' },
+      { label: 'Asansör', value: '6' },
+    ],
+    gallery: ['/uploads/projects/giris.jpg', '/uploads/projects/hol1.jpg', '/uploads/projects/asansor.jpg'],
+  },
+  {
+    id: 3,
+    title: 'Sahil Villaları',
+    category: 'Lüks Konut',
+    image: '/uploads/projects/outdoor1.jpg',
+    location: 'Büyükçekmece',
+    year: '2025',
+    description:
+      'Deniz manzaralı, ferah yaşam alanları ve dış mekan odaklı çizgisiyle premium segment villa yerleşkesi.',
+    client: 'Mavi Kıyı Yapı',
+    area: '24.500 m²',
+    delivery: 'Aralık 2025',
+    stats: [
+      { label: 'Villa', value: '42' },
+      { label: 'Sosyal Alan', value: '3.100 m²' },
+      { label: 'Peyzaj', value: '%58' },
+    ],
+    gallery: ['/uploads/projects/outdoor1.jpg', '/uploads/projects/outdoor2.jpg', '/uploads/projects/salon2.jpg'],
+  },
+  {
+    id: 4,
+    title: 'Merkez AVM',
+    category: 'Ticari',
+    image: '/uploads/projects/hol2.jpg',
+    location: 'Beylikdüzü',
+    year: '2022',
+    description:
+      'Yaya akışı güçlü ortak alanlar, dayanıklı malzeme seçimi ve modern yönlendirme sistemiyle oluşturulan AVM alanı.',
+    client: 'Merkez Ticaret A.Ş.',
+    area: '31.000 m²',
+    delivery: 'Kasım 2022',
+    stats: [
+      { label: 'Mağaza', value: '137' },
+      { label: 'Yemek Alanı', value: '2.400 m²' },
+      { label: 'Günlük Ziyaretçi', value: '28.000+' },
+    ],
+    gallery: ['/uploads/projects/hol2.jpg', '/uploads/projects/diafon.jpg', '/uploads/projects/wc.jpg'],
+  },
+  {
+    id: 5,
+    title: 'Orman Evleri',
+    category: 'Konut',
+    image: '/uploads/projects/salon1.jpg',
+    location: 'Sarıyer',
+    year: '2021',
+    description:
+      'Doğal ışık odaklı plan şeması, fonksiyonel mutfak ve yaşam alanlarıyla aile dostu butik konut projesi.',
+    client: 'Yeşil Vadi Konut',
+    area: '11.400 m²',
+    delivery: 'Mayıs 2021',
+    stats: [
+      { label: 'Daire', value: '88' },
+      { label: 'Ortak Bahçe', value: '1.800 m²' },
+      { label: 'Enerji Sınıfı', value: 'A+' },
+    ],
+    gallery: ['/uploads/projects/salon1.jpg', '/uploads/projects/mutfak1.jpg', '/uploads/projects/bina5.jpg'],
+  },
+  {
+    id: 6,
+    title: 'Sanayi Kompleksi',
+    category: 'Endüstriyel',
+    image: '/uploads/projects/asansor.jpg',
+    location: 'Gebze',
+    year: '2020',
+    description:
+      'Yüksek taşıma kapasiteli teknik alanlar, operasyonel verimlilik ve uzun ömürlü altyapı hedefiyle hayata geçirildi.',
+    client: 'Anadolu Endüstri',
+    area: '42.800 m²',
+    delivery: 'Ağustos 2020',
+    stats: [
+      { label: 'Üretim Hattı', value: '5' },
+      { label: 'Yükleme Rampası', value: '18' },
+      { label: 'Tavan Yüksekliği', value: '12 m' },
+    ],
+    gallery: ['/uploads/projects/asansor.jpg', '/uploads/projects/bina4.jpg', '/uploads/projects/wc.jpg'],
+  },
+];
