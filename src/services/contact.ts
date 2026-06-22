@@ -1,7 +1,6 @@
 export type ContactPayload = {
   fullName: string;
   phone: string;
-  email: string;
   subject: string;
   message: string;
 };
@@ -20,7 +19,6 @@ export async function sendContactMessage(payload: ContactPayload) {
     body: JSON.stringify({
       name: payload.fullName,
       phone: payload.phone,
-      email: payload.email,
       subject: payload.subject,
       message: payload.message,
       _template: 'table',
@@ -32,5 +30,15 @@ export async function sendContactMessage(payload: ContactPayload) {
     throw new Error(message || 'Mesaj gönderimi başarısız oldu.');
   }
 
-  return response.json().catch(() => ({}));
+  const result = await response.json().catch(() => ({} as { success?: boolean | string; message?: string }));
+
+  // FormSubmit bazı hatalarda HTTP 200 döndürse de success=false ile hata bilgisini iletiyor.
+  if (result && typeof result === 'object' && 'success' in result) {
+    const isSuccess = result.success === true || result.success === 'true';
+    if (!isSuccess) {
+      throw new Error(result.message || 'Form henüz aktif değil veya gönderim başarısız oldu.');
+    }
+  }
+
+  return result;
 }

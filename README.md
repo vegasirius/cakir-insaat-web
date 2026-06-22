@@ -11,6 +11,18 @@ Bu proje Vite + React + TypeScript ile hazirlanmistir.
 
 1. npm run build
 
+## Mesaj Formu Aktivasyonu
+
+Mesaj formu FormSubmit ile calisir.
+
+1. Formu ilk kez gonderdiginde FormSubmit, endpointteki e-posta adresine bir aktivasyon maili yollar.
+2. Maildeki "Activate Form" baglantisina bir kez tiklanmalidir.
+3. Aktivasyondan sonra form gonderimleri normal sekilde iletilir.
+
+Isterseniz endpoint adresini .env dosyasindan degistirebilirsiniz:
+
+- VITE_CONTACT_ENDPOINT=https://formsubmit.co/ajax/sizin@eposta.com
+
 ## Otomatik Yayin (GitHub Pages)
 
 Main branch'e her push sonrasi otomatik deploy calisir.

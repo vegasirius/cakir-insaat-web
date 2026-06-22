@@ -109,21 +109,20 @@ const ProjectsPage = () => {
             <div key={project.id} className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md ring-1 ring-slate-200">
               <img
                 src={project.image}
-                alt={project.title}
+                alt="Konut projesi görseli"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <button
                 onClick={() => openProjectModal(project)}
                 className="absolute inset-0 z-10"
-                aria-label={`${project.title} detayını aç`}
+                aria-label="Proje detayını aç"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300" />
               <div className="pointer-events-none absolute bottom-0 left-0 w-full p-6 translate-y-1 transition-transform duration-300 md:translate-y-4 md:group-hover:translate-y-0">
                 <span className="mb-2 inline-flex items-center rounded-full bg-amber-500/90 px-2.5 py-1 text-xs font-extrabold uppercase text-slate-900">
                   {project.category}
                 </span>
-                <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                <p className="mt-1 text-sm text-slate-200/90">{project.location} · {project.year}</p>
+                <p className="text-sm font-semibold text-white/90">Konut Projesi</p>
                 <p className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-amber-300">
                   Detayları İncele <ArrowRight size={14} />
                 </p>
