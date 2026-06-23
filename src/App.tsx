@@ -87,7 +87,7 @@ const App = () => {
 
   const contactInfo = {
     address: ['Demirkapı Mahallesi, Osmanoğlu Caddesi No:52', 'İstanbul / Bağcılar'],
-    phones: ['05367993622'],
+    phones: ['05367993622', '05378303302'],
   };
 
   const projectCategories = useMemo(
