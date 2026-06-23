@@ -9,7 +9,6 @@ import {
   HardHat,
   Ruler,
   ArrowRight,
-  Globe,
 } from 'lucide-react';
 import logoHorizontal from './assets/cakirimg/logo.png';
 import heroSlogan from './assets/cakirimg/3.png';
@@ -442,15 +441,35 @@ const App = () => {
               <div className="mt-10">
                 <h4 className="mb-4 font-bold text-slate-900">Bizi Takip Edin</h4>
                 <div className="flex gap-4">
-                  {[Globe, Phone, MapPin].map((Icon, idx) => (
-                    <a
-                      key={idx}
-                      href="#"
-                      className="flex h-10 w-10 items-center justify-center rounded bg-slate-200 text-slate-600 transition-colors hover:bg-amber-500 hover:text-white"
-                    >
-                      <Icon size={20} />
-                    </a>
-                  ))}
+                  <a
+                    href="https://www.instagram.com/cakir_insaatyapi/"
+                    aria-label="Instagram sayfasina git"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded bg-slate-200 text-slate-600 transition-colors hover:bg-amber-500 hover:text-white"
+                  >
+                    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                  <a
+                    href="tel:05367993622"
+                    aria-label="Telefon ile ara"
+                    className="flex h-10 w-10 items-center justify-center rounded bg-slate-200 text-slate-600 transition-colors hover:bg-amber-500 hover:text-white"
+                  >
+                    <Phone size={20} />
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Demirkap%C4%B1+Mahallesi+Osmano%C4%9Flu+Caddesi+No%3A52+%C4%B0stanbul+Ba%C4%9Fc%C4%B1lar"
+                    aria-label="Adresi haritada ac"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded bg-slate-200 text-slate-600 transition-colors hover:bg-amber-500 hover:text-white"
+                  >
+                    <MapPin size={20} />
+                  </a>
                 </div>
               </div>
             </div>
